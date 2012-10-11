@@ -3,6 +3,7 @@ class Spree::Braintree < Spree::Gateway
 	preference :private_key, :string
 	preference :public_key, :string
 
+  attr_accessible :preferred_merchant_id, :preferred_private_key, :preferred_public_key
   def provider_class 
     ActiveMerchant::Billing::BraintreeGateway
   end
